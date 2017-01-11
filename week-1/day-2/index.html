@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Lilly's Pizza</title>
+    <link rel="stylesheet" href="styles/app.css">
+  </head>
+  <body>
+    <header>
+      <img class="logo" src="images/pizza-icon.png" alt="pizza slice">
+      <h1>Lilly's Pizza</h1>
+    </header>
+    <main>
+      <!-- Hours -->
+      <table>
+        <tr tabindex="0">
+          <td>Sunday - Thursday</td>
+          <td>12:00PM - 11:00PM</td>
+        </tr>
+        <tr tabindex="0">
+          <td>Friday - Saturday</td>
+          <td>10:00AM - 3:00AM</td>
+        </tr>
+        <tr tabindex="0">
+          <td>My Birthday</td>
+          <td>Closed</td>
+        </tr>
+      </table>
+
+      <!-- Order Form -->
+      <form action="http://requestb.in/1349iuo1" method="post" autocomplete="off">
+        <fieldset>
+          <legend>Customer Information</legend>
+
+          <label for="customer-name">Your Name</label>
+          <input id="customer-name" type="text" placeholder="Your Name" name="Customer Name" required>
+
+          <label for="customer-address">Address</label>
+          <input id="customer-address" type="text" placeholder="Your Address" name="Address" required>
+
+          <label for="customer-address-2">Adress 2</label>
+          <input id="customer-address-2" type="text" placeholder="Address 2" name="Address 2" required>
+
+          <label for="customer-zip">Zipcode</label>
+          <input id="customer-zip" type="text" placeholder="Zipcode" maxlength="5" name="Zipcode" required>
+        </fieldset>
+        <fieldset>
+          <legend>Order Details</legend>
+
+          <label for="pizza-size">Pizza Size</label>
+          <select id="pizza-size" name="Pizza Size">
+            <option>Small</option>
+            <option>Medium</option>
+            <option selected>Large</option>
+            <option>Family Size</option>
+          </select>
+
+          <label for="pizza-quantity">Quantity</label>
+          <input id="pizza-quantity" type="number" value="1" min="1" max="15" name="Quantity">
+
+          <fieldset>
+            <legend>Toppings</legend>
+
+            <label for="pepporoni">Pepperoni</label>
+            <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">
+
+            <label for="bacon">Bacon</label>
+            <input id="bacon" type="checkbox" name="toppings" value="bacon">
+
+            <label for="banana-peppers">Banana Peppers</label>
+            <input id="banana-peppers" type="checkbox" name="toppings" value="bp">
+          </fieldset>
+        </fieldset>
+
+        <label for="special-instructions">Special Instructions</label>
+        <textarea id="special-instructions" rows="5" cols="50" name="Special Instructions"></textarea>
+
+        <input type="submit" value="Place Order">
+      </form>
+
+
+    </main>
+    <footer>
+      <img class="logo" src="images/pizza-icon.png" alt="pizza slice">
+      <span>&copy; 2017</span>
+    </footer>
+  </body>
+</html>

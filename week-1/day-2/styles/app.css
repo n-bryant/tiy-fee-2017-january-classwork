@@ -1,0 +1,27 @@
+body {
+  background: #fff;
+}
+
+header {
+  text-align: center;
+}
+
+header .logo {
+  width: 115px;
+}
+
+footer .logo {
+  width: 30px;
+}
+
+tr:nth-child(odd) {
+  background: #ccc;
+}
+
+tr:nth-child(even) {
+  background: #aaa;
+}
+
+tr:focus {
+  color: red;
+}
