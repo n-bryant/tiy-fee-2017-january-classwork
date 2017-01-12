@@ -1,0 +1,118 @@
+/* Inputs */
+input, select, textarea {
+  margin-bottom: 10px;
+}
+
+select {
+  width: 110px;
+}
+input[type=number] {
+  width: 40px;
+}
+input[type=text], textarea {
+  width: 100%;
+}
+input[type=password] {
+  width: 150px;
+}
+
+input[type=reset], input[type=submit] {
+  background: #74B5F9;
+  border-radius: 5px;
+}
+
+textarea {
+  border-width: 2px;
+}
+
+/* Input Special */
+input:focus, textarea:focus, select:focus {
+  border-color: #74B5F9;
+  outline: none;
+  background: #eee;
+}
+
+input:invalid {
+  background: linear-gradient(to left,red, yellow);
+  color: white;
+}
+
+/* General Styles */
+body {
+  background-image: url("https://upload.wikimedia.org/wikipedia/commons/6/62/Starsinthesky.jpg");
+  font-family: 'Fira Sans Extra Condensed', sans-serif;
+}
+
+header {
+  text-align: center;
+  color: cornsilk;
+  padding-top: 25px;
+}
+
+main {
+  margin: 0 auto;
+  padding-top: 25px;
+  padding-bottom: 25px;
+  width: 1500px;
+  background: rgba(151, 172, 224, 0.75);
+  border-radius: 15px;
+}
+
+label, fieldset span {
+  font-weight: bold;
+}
+
+fieldset {
+  float: left;
+  width: 30%;
+  margin-bottom: 20px;
+  height: 360px;
+  border: 2px solid #5877e0;
+}
+form:first-child {
+  padding-left: 3.33%;
+}
+form {
+  overflow: auto;
+}
+
+.norm-wt {
+  font-weight: normal;
+}
+
+ul {
+  padding: 0;
+  text-align: center;
+}
+li {
+  display: inline-block;
+  padding: 0;
+  list-style: none;
+}
+.emblem {
+  width: 200px;
+  clear: both;
+}
+
+footer {
+  padding-top: 25px;
+  text-align: center;
+  color: cornsilk;
+}
+
+/* Media Queries */
+@media only screen and (max-width: 1570px) {
+    fieldset {
+      float: none;
+      display: block;
+      width: 75%;
+      margin: 0 auto;
+    }
+    main {
+      margin: 0 auto;
+      width: 750px;
+    }
+    form:first-child {
+      padding: 0;
+    }
+}

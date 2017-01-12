@@ -1,87 +1,101 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
   <head>
-    <title>Lilly's Pizza</title>
-    <link rel="stylesheet" href="styles/app.css">
+    <title>Jedi Application</title>
+    <link rel="stylesheet" href="styles/main.css">
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans+Extra+Condensed" rel="stylesheet">
   </head>
   <body>
     <header>
-      <img class="logo" src="images/pizza-icon.png" alt="pizza slice">
-      <h1>Lilly's Pizza</h1>
+      <h1>Force User Sign Up Form</h1>
     </header>
     <main>
-      <!-- Hours -->
-      <table>
-        <tr tabindex="0">
-          <td>Sunday - Thursday</td>
-          <td>12:00PM - 11:00PM</td>
-        </tr>
-        <tr tabindex="0">
-          <td>Friday - Saturday</td>
-          <td>10:00AM - 3:00AM</td>
-        </tr>
-        <tr tabindex="0">
-          <td>My Birthday</td>
-          <td>Closed</td>
-        </tr>
-      </table>
-
-      <!-- Order Form -->
-      <form action="http://requestb.in/1349iuo1" method="post" autocomplete="off">
+      <form action="http://requestb.in/15p7g0l1" method="post">
+        <!-- Column 1: Basic Information -->
         <fieldset>
-          <legend>Customer Information</legend>
+          <legend>Basic Info</legend>
 
-          <label for="customer-name">Your Name</label>
-          <input id="customer-name" type="text" placeholder="Your Name" name="Customer Name" required>
+          <label for="full-name">Full Name</label><br>
+          <input id="full-name" type="text" placeholder="Luke Skywalker" name="full-name" required><br>
 
-          <label for="customer-address">Address</label>
-          <input id="customer-address" type="text" placeholder="Your Address" name="Address" required>
+          <label for="profile-pic">Profile Pic</label><br>
+          <input id="profile-pic" type="file" accept="image/*" name="pic"><br>
 
-          <label for="customer-address-2">Adress 2</label>
-          <input id="customer-address-2" type="text" placeholder="Address 2" name="Address 2" required>
+          <label for="email">Email</label><br>
+          <input id="email" type="text" placeholder="luke@sky.com" name="email" required><br>
 
-          <label for="customer-zip">Zipcode</label>
-          <input id="customer-zip" type="text" placeholder="Zipcode" maxlength="5" name="Zipcode" required>
-        </fieldset>
-        <fieldset>
-          <legend>Order Details</legend>
+          <span>Side:</span><br>
+          <input id="light" type="radio" name="side" value="light">
+          <label class="norm-wt" for="light">Light</label>
+          <input id="dark" type="radio" name="side" value="dark">
+          <label class="norm-wt" for="dark">Dark</label><br>
 
-          <label for="pizza-size">Pizza Size</label>
-          <select id="pizza-size" name="Pizza Size">
-            <option>Small</option>
-            <option>Medium</option>
-            <option selected>Large</option>
-            <option>Family Size</option>
-          </select>
-
-          <label for="pizza-quantity">Quantity</label>
-          <input id="pizza-quantity" type="number" value="1" min="1" max="15" name="Quantity">
-
-          <fieldset>
-            <legend>Toppings</legend>
-
-            <label for="pepporoni">Pepperoni</label>
-            <input id="pepperoni" type="checkbox" name="toppings" value="pepperoni">
-
-            <label for="bacon">Bacon</label>
-            <input id="bacon" type="checkbox" name="toppings" value="bacon">
-
-            <label for="banana-peppers">Banana Peppers</label>
-            <input id="banana-peppers" type="checkbox" name="toppings" value="bp">
-          </fieldset>
+          <label for="origin-story">Origin Story</label><br>
+          <textarea id="origin-story" name="origin-story" rows="5" required></textarea>
         </fieldset>
 
-        <label for="special-instructions">Special Instructions</label>
-        <textarea id="special-instructions" rows="5" cols="50" name="Special Instructions"></textarea>
+        <!-- Column 2: Abilities -->
+        <fieldset>
+          <legend>Abilities</legend>
 
-        <input type="submit" value="Place Order">
+          <label for="saber-color">Lightsaber Color</label><br>
+          <select id="saber-color" name="saber-color">
+            <option selected>Select Color</option>
+            <option>Blue</option>
+            <option>Red</option>
+            <option>Green</option>
+            <option>Purple</option>
+          </select><br>
+
+          <label for="object-count">How many objects can you levitate at once?</label><br>
+          <input id="object-count" type="number" min="0" value="0" name="object-count"><br>
+
+          <label for="fav-ability">Favorite Ability</label><br>
+          <input id="fav-ability" type="text" placeholder="precognition" name="fav-ability"><br>
+
+          <span>Pilot Experience</span><br>
+          <input id="speeder" type="checkbox" name="pilot-xp" value="speeder">
+          <label class="norm-wt" for="speeder">Speeder</label><br>
+          <input id="transport" type="checkbox" name="pilot-xp" value="transport">
+          <label class="norm-wt" for="transport">Transport</label><br>
+          <input id="x-wing" type="checkbox" name="pilot-xp" value="x-wing">
+          <label class="norm-wt" for="x-wing">X-wing</label><br>
+          <input id="tie-fighter" type="checkbox" name="pilot-xp" value="tie-fighter">
+          <label class="norm-wt" for="tie-fighter">TIE Fighter</label><br>
+          <input id="starship" type="checkbox" name="pilot-xp" value="starship">
+          <label class="norm-wt" for="starship">Starship</label><br>
+          <input id="bantha" type="checkbox" name="pilot-xp" value="bantha">
+          <label class="norm-wt" for="bantha">Bantha</label>
+        </fieldset>
+
+        <!-- Column 3: Application Information -->
+        <fieldset>
+          <legend>Application Info</legend>
+
+          <label for="mentor">Desired Mentor</label><br>
+          <input id="mentor" type="text" placeholder="Yoda" name="mentor"><br>
+
+          <label for="app-date">Application Date</label><br>
+          <input id="app-date" type="date" name="app-date" required><br>
+
+          <label for="app-pw">Application Password</label><br>
+          <input id="app-pw" type="password" name="app-pw" required><br>
+
+          <label for="dark-how">How do you get to the dark side?</label><br>
+          <textarea id="dark-how" name="dark-how" rows="5"></textarea><br>
+
+          <input type="reset" value="Start Over">
+          <input type="submit" value="Apply">
+        </fieldset>
       </form>
-
-
+      <ul>
+        <li><img class="emblem" src="http://media.moddb.com/images/articles/1/113/112616/auto/Jedi_Order_Icon_VM.png" alt="Jedi Emblem"</li>
+        <li><img class="emblem" src="http://i61.tinypic.com/9rn8f4.png" alt="Sith Emblem"</li>
+      </ul>
     </main>
     <footer>
-      <img class="logo" src="images/pizza-icon.png" alt="pizza slice">
-      <span>&copy; 2017</span>
+      <span id="dynamic-foot">&copy; </span>
     </footer>
+    <script src="app.js"></script>
   </body>
 </html>
